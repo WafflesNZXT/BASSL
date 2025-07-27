@@ -1,5 +1,21 @@
 /* BASSL - Bay Area Shia Sports League Website Styles */
 /* Mobile-first responsive design using HTML5 and CSS3 */
+/* Color scheme based on BASSL logo: Dark green, emerald, and cream */
+
+/* CSS Custom Properties - BASSL Logo Colors */
+:root {
+    --primary-dark: #1a3d2e;      /* Dark forest green from logo */
+    --primary-green: #2d5a3d;     /* Medium green from logo */
+    --accent-emerald: #4a9b5e;    /* Emerald green from logo */
+    --accent-light: #6bb77b;      /* Light green accent */
+    --cream-bg: #f5f3f0;          /* Cream background from logo */
+    --text-dark: #2c3e2d;         /* Dark green text */
+    --text-light: #5a6b5d;        /* Medium green text */
+    --white: #ffffff;
+    --success: #4a9b5e;           /* Using logo green for success */
+    --warning: #d4a574;           /* Warm tone complement */
+    --danger: #c85a5a;            /* Muted red */
+}
 
 /* CSS Reset and Base Styles */
 * {
@@ -16,8 +32,8 @@ html {
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f8f9fa;
+    color: var(--text-dark);
+    background-color: var(--cream-bg);
 }
 
 /* Typography */
@@ -37,13 +53,13 @@ p {
 }
 
 a {
-    color: #007bff;
+    color: var(--accent-emerald);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #0056b3;
+    color: var(--primary-green);
 }
 
 /* Layout Components */
@@ -59,9 +75,9 @@ a:hover {
 
 /* Header and Navigation */
 header {
-    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-    color: white;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-green) 100%);
+    color: var(--white);
+    box-shadow: 0 2px 10px rgba(26, 61, 46, 0.3);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -100,7 +116,7 @@ nav ul {
 }
 
 nav a {
-    color: white;
+    color: var(--white);
     font-weight: 500;
     padding: 0.5rem 1rem;
     border-radius: 5px;
@@ -109,7 +125,7 @@ nav a {
 
 nav a:hover,
 nav a.active {
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(74, 155, 94, 0.3);
 }
 
 /* Mobile Menu Toggle */
@@ -124,9 +140,9 @@ nav a.active {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(30, 60, 114, 0.8), rgba(42, 82, 152, 0.8)), 
+    background: linear-gradient(rgba(26, 61, 46, 0.85), rgba(45, 90, 61, 0.85)), 
                 url('../images/hero-bg.jpg') center/cover;
-    color: white;
+    color: var(--white);
     text-align: center;
     padding: 6rem 0;
     min-height: 60vh;
@@ -149,8 +165,8 @@ nav a.active {
 .btn {
     display: inline-block;
     padding: 1rem 2rem;
-    background-color: #28a745;
-    color: white;
+    background-color: var(--accent-emerald);
+    color: var(--white);
     border-radius: 5px;
     font-weight: 600;
     text-transform: uppercase;
@@ -161,20 +177,20 @@ nav a.active {
 }
 
 .btn:hover {
-    background-color: #218838;
+    background-color: var(--primary-green);
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+    box-shadow: 0 4px 15px rgba(74, 155, 94, 0.4);
 }
 
 .btn-secondary {
     background-color: transparent;
-    border: 2px solid white;
-    color: white;
+    border: 2px solid var(--white);
+    color: var(--white);
 }
 
 .btn-secondary:hover {
-    background-color: white;
-    color: #1e3c72;
+    background-color: var(--white);
+    color: var(--primary-dark);
 }
 
 /* Card Components */
@@ -186,20 +202,20 @@ nav a.active {
 }
 
 .card {
-    background: white;
+    background: var(--white);
     border-radius: 10px;
     padding: 2rem;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(26, 61, 46, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 25px rgba(26, 61, 46, 0.15);
 }
 
 .card h3 {
-    color: #1e3c72;
+    color: var(--primary-dark);
     margin-bottom: 1rem;
 }
 
@@ -211,13 +227,13 @@ nav a.active {
 .team-logo {
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    background: linear-gradient(135deg, var(--primary-dark), var(--accent-emerald));
     border-radius: 50%;
     margin: 0 auto 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: var(--white);
     font-size: 2rem;
     font-weight: bold;
 }
@@ -227,25 +243,25 @@ nav a.active {
     overflow-x: auto;
     margin: 2rem 0;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(26, 61, 46, 0.1);
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    background: white;
+    background: var(--white);
     min-width: 600px;
 }
 
 th, td {
     padding: 1rem;
     text-align: left;
-    border-bottom: 1px solid #dee2e6;
+    border-bottom: 1px solid rgba(74, 155, 94, 0.2);
 }
 
 th {
-    background-color: #1e3c72;
-    color: white;
+    background-color: var(--primary-dark);
+    color: var(--white);
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -253,12 +269,12 @@ th {
 }
 
 tr:hover {
-    background-color: #f8f9fa;
+    background-color: rgba(74, 155, 94, 0.05);
 }
 
 .standings-table td:first-child {
     font-weight: 600;
-    color: #1e3c72;
+    color: var(--primary-dark);
 }
 
 /* Forms */
@@ -270,28 +286,29 @@ label {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 600;
-    color: #333;
+    color: var(--text-dark);
 }
 
 input, textarea, select {
     width: 100%;
     padding: 1rem;
-    border: 2px solid #dee2e6;
+    border: 2px solid rgba(74, 155, 94, 0.3);
     border-radius: 5px;
     font-size: 1rem;
     transition: border-color 0.3s ease;
+    background-color: var(--white);
 }
 
 input:focus, textarea:focus, select:focus {
     outline: none;
-    border-color: #1e3c72;
-    box-shadow: 0 0 0 3px rgba(30, 60, 114, 0.1);
+    border-color: var(--accent-emerald);
+    box-shadow: 0 0 0 3px rgba(74, 155, 94, 0.1);
 }
 
 /* Footer */
 footer {
-    background-color: #1e3c72;
-    color: white;
+    background-color: var(--primary-dark);
+    color: var(--white);
     text-align: center;
     padding: 3rem 0 2rem;
     margin-top: 4rem;
@@ -306,7 +323,7 @@ footer {
 
 .footer-section h4 {
     margin-bottom: 1rem;
-    color: #fff;
+    color: var(--white);
 }
 
 .footer-section p, .footer-section a {
@@ -315,7 +332,7 @@ footer {
 }
 
 .footer-section a:hover {
-    color: white;
+    color: var(--accent-light);
 }
 
 .footer-bottom {
@@ -334,13 +351,13 @@ footer {
 .mt-1 { margin-top: 1rem; }
 .mt-2 { margin-top: 2rem; }
 
-.bg-primary { background-color: #1e3c72; }
-.bg-secondary { background-color: #6c757d; }
-.bg-success { background-color: #28a745; }
+.bg-primary { background-color: var(--primary-dark); }
+.bg-secondary { background-color: var(--text-light); }
+.bg-success { background-color: var(--accent-emerald); }
 
-.text-primary { color: #1e3c72; }
-.text-success { color: #28a745; }
-.text-danger { color: #dc3545; }
+.text-primary { color: var(--primary-dark); }
+.text-success { color: var(--accent-emerald); }
+.text-danger { color: var(--danger); }
 
 /* Responsive Design - Mobile First */
 
@@ -362,9 +379,9 @@ footer {
         top: 100%;
         left: 0;
         right: 0;
-        background-color: #1e3c72;
+        background-color: var(--primary-dark);
         padding: 1rem;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        box-shadow: 0 4px 10px rgba(26, 61, 46, 0.2);
     }
     
     nav ul.show {
@@ -459,7 +476,7 @@ footer {
 
 /* Focus styles for keyboard navigation */
 button:focus, a:focus, input:focus, textarea:focus, select:focus {
-    outline: 2px solid #1e3c72;
+    outline: 2px solid var(--accent-emerald);
     outline-offset: 2px;
 }
 
@@ -473,4 +490,3 @@ button:focus, a:focus, input:focus, textarea:focus, select:focus {
         border: 2px solid currentColor;
     }
 }
-

@@ -29,12 +29,13 @@ BASSL/
 
 ## 🎨 Design Features
 
-### Color Scheme
-- **Primary Blue**: `#1e3c72` - Headers, navigation, primary buttons
-- **Secondary Blue**: `#2a5298` - Gradients, accents
-- **Success Green**: `#28a745` - Success states, call-to-action buttons
-- **Background**: `#f8f9fa` - Light gray background
-- **Text**: `#333` - Dark gray for readability
+### Color Scheme (Based on BASSL Logo)
+- **Primary Dark Green**: `#1a3d2e` - Headers, navigation, primary elements
+- **Primary Green**: `#2d5a3d` - Gradients, secondary elements
+- **Accent Emerald**: `#4a9b5e` - Buttons, links, highlights
+- **Accent Light**: `#6bb77b` - Light accents, hover states
+- **Cream Background**: `#f5f3f0` - Page background matching logo
+- **Text Dark**: `#2c3e2d` - Primary text color
 
 ### Typography
 - **Font Family**: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
@@ -193,4 +194,3 @@ This website template is created for the Bay Area Shia Sports League (BASSL). Fe
 **Built with ❤️ for the BASSL community**
 
 *Last updated: July 2024*
-
