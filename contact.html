@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact BASSL - Get in touch with the Bay Area Shia Sports League for registration, inquiries, and more">
+    <meta name="keywords" content="BASSL, Contact, Registration, Bay Area, Shia, Sports, League">
+    <title>Contact - BASSL</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div>
+                        <h1>BASSL</h1>
+                        <div class="logo-subtitle">Bay Area Shia Sports League</div>
+                    </div>
+                </div>
+                <nav>
+                    <button class="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+                    <ul id="nav-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="teams.html">Teams</a></li>
+                        <li><a href="schedule.html">Schedule</a></li>
+                        <li><a href="standings.html">Standings</a></li>
+                        <li><a href="contact.html" class="active">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="section" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 4rem 0;">
+        <div class="container text-center">
+            <h1>Contact Us</h1>
+            <p style="font-size: 1.2rem;">Get in touch with BASSL for registration, inquiries, and more</p>
+        </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="section" style="background-color: white;">
+        <div class="container">
+            <div class="card-grid">
+                <div class="card text-center">
+                    <h3>📧 Email Us</h3>
+                    <p><strong>General Inquiries:</strong></p>
+                    <p><a href="mailto:info@bassl.org">info@bassl.org</a></p>
+                    <p><strong>Registration:</strong></p>
+                    <p><a href="mailto:registration@bassl.org">registration@bassl.org</a></p>
+                </div>
+                <div class="card text-center">
+                    <h3>📞 Call Us</h3>
+                    <p><strong>Main Office:</strong></p>
+                    <p><a href="tel:+15551234567">(555) 123-4567</a></p>
+                    <p><strong>Emergency Contact:</strong></p>
+                    <p><a href="tel:+15551234568">(555) 123-4568</a></p>
+                </div>
+                <div class="card text-center">
+                    <h3>📍 Location</h3>
+                    <p><strong>Bay Area, California</strong></p>
+                    <p>We operate across multiple venues in the Bay Area</p>
+                    <p><a href="#venues">View All Venues</a></p>
+                </div>
+                <div class="card text-center">
+                    <h3>🕒 Office Hours</h3>
+                    <p><strong>Monday - Friday:</strong></p>
+                    <p>9:00 AM - 6:00 PM</p>
+                    <p><strong>Weekends:</strong></p>
+                    <p>10:00 AM - 4:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="section">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <h2 class="text-center mb-2">Send Us a Message</h2>
+                <div class="card">
+                    <form id="contact-form">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div class="form-group">
+                                <label for="first-name">First Name *</label>
+                                <input type="text" id="first-name" name="first-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name">Last Name *</label>
+                                <input type="text" id="last-name" name="last-name" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="inquiry-type">Inquiry Type *</label>
+                            <select id="inquiry-type" name="inquiry-type" required>
+                                <option value="">Select an option</option>
+                                <option value="player-registration">Player Registration</option>
+                                <option value="team-registration">Team Registration</option>
+                                <option value="general-inquiry">General Inquiry</option>
+                                <option value="venue-booking">Venue Booking</option>
+                                <option value="sponsorship">Sponsorship Opportunity</option>
+                                <option value="volunteer">Volunteer Opportunity</option>
+                                <option value="complaint">Complaint/Issue</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="sport-interest">Sport of Interest</label>
+                            <select id="sport-interest" name="sport-interest">
+                                <option value="">Select a sport</option>
+                                <option value="soccer">Soccer</option>
+                                <option value="basketball">Basketball</option>
+                                <option value="both">Both Soccer and Basketball</option>
+                                <option value="other">Other Sport</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Please provide details about your inquiry..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                Subscribe to BASSL newsletter for updates and announcements
+                            </label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                <input type="checkbox" id="privacy" name="privacy" required>
+                                I agree to the <a href="#" style="color: #1e3c72;">Privacy Policy</a> and <a href="#" style="color: #1e3c72;">Terms of Service</a> *
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn" style="width: 100%; margin-top: 1rem;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Information -->
+    <section class="section" style="background-color: white;">
+        <div class="container">
+            <h2 class="text-center mb-2">Registration Information</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>🏃‍♂️ Player Registration</h3>
+                    <p><strong>Individual players welcome!</strong></p>
+                    <ul style="margin: 1rem 0; padding-left: 1.5rem;">
+                        <li>Open to all skill levels</li>
+                        <li>Age groups: 16+ for adults</li>
+                        <li>Registration fee: $50 per season</li>
+                        <li>Includes jersey and insurance</li>
+                    </ul>
+                    <a href="mailto:registration@bassl.org?subject=Player Registration" class="btn" style="font-size: 0.9rem; padding: 0.5rem 1rem;">Register as Player</a>
+                </div>
+                
+                <div class="card">
+                    <h3>⚽ Team Registration</h3>
+                    <p><strong>Register your team!</strong></p>
+                    <ul style="margin: 1rem 0; padding-left: 1.5rem;">
+                        <li>Minimum 11 players per team</li>
+                        <li>Team registration fee: $500</li>
+                        <li>Includes referee fees</li>
+                        <li>Trophy and medals for winners</li>
+                    </ul>
+                    <a href="mailto:registration@bassl.org?subject=Team Registration" class="btn" style="font-size: 0.9rem; padding: 0.5rem 1rem;">Register Team</a>
+                </div>
+                
+                <div class="card">
+                    <h3>🏀 Basketball League</h3>
+                    <p><strong>New basketball league!</strong></p>
+                    <ul style="margin: 1rem 0; padding-left: 1.5rem;">
+                        <li>Season starts September 2024</li>
+                        <li>5v5 format games</li>
+                        <li>Registration fee: $40 per player</li>
+                        <li>Indoor courts available</li>
+                    </ul>
+                    <a href="mailto:registration@bassl.org?subject=Basketball Registration" class="btn" style="font-size: 0.9rem; padding: 0.5rem 1rem;">Join Basketball</a>
+                </div>
+                
+                <div class="card">
+                    <h3>🤝 Volunteer Opportunities</h3>
+                    <p><strong>Help build our community!</strong></p>
+                    <ul style="margin: 1rem 0; padding-left: 1.5rem;">
+                        <li>Referee training provided</li>
+                        <li>Event organization help</li>
+                        <li>Social media assistance</li>
+                        <li>Community service hours</li>
+                    </ul>
+                    <a href="mailto:volunteer@bassl.org?subject=Volunteer Interest" class="btn" style="font-size: 0.9rem; padding: 0.5rem 1rem;">Volunteer</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Venues Section -->
+    <section class="section" id="venues">
+        <div class="container">
+            <h2 class="text-center mb-2">Our Venues</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Central Park Field A</h3>
+                    <p><strong>Address:</strong> 123 Central Park Ave, San Francisco, CA 94102</p>
+                    <p><strong>Facilities:</strong> Full-size soccer field, parking, restrooms, concessions</p>
+                    <p><strong>Capacity:</strong> 200 spectators</p>
+                    <p><strong>Contact:</strong> (555) 123-0001</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Silicon Valley Sports Complex</h3>
+                    <p><strong>Address:</strong> 456 Tech Drive, San Jose, CA 95110</p>
+                    <p><strong>Facilities:</strong> Multiple fields, indoor courts, parking, food court</p>
+                    <p><strong>Capacity:</strong> 500 spectators</p>
+                    <p><strong>Contact:</strong> (555) 123-0002</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Fremont Sports Complex</h3>
+                    <p><strong>Address:</strong> 789 Sports Way, Fremont, CA 94536</p>
+                    <p><strong>Facilities:</strong> Soccer field, bleachers, parking, equipment storage</p>
+                    <p><strong>Capacity:</strong> 150 spectators</p>
+                    <p><strong>Contact:</strong> (555) 123-0003</p>
+                </div>
+                
+                <div class="card">
+                    <h3>East Bay Athletic Center</h3>
+                    <p><strong>Address:</strong> 321 Athletic Blvd, Oakland, CA 94601</p>
+                    <p><strong>Facilities:</strong> Indoor/outdoor courts, gym, locker rooms</p>
+                    <p><strong>Capacity:</strong> 300 spectators</p>
+                    <p><strong>Contact:</strong> (555) 123-0004</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" style="background-color: white;">
+        <div class="container">
+            <h2 class="text-center mb-2">Frequently Asked Questions</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="card">
+                    <h3>How do I register for the league?</h3>
+                    <p>You can register as an individual player or as a team by contacting us via email at registration@bassl.org or using the contact form above. We'll guide you through the registration process.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>What is the registration fee?</h3>
+                    <p>Individual player registration is $50 per season for soccer and $40 for basketball. Team registration is $500 for soccer teams. All fees include insurance, jerseys, and referee costs.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Do I need experience to join?</h3>
+                    <p>No! BASSL welcomes players of all skill levels. We focus on community building and fun while maintaining competitive play. Our goal is to provide opportunities for everyone to participate.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>When do seasons start?</h3>
+                    <p>Soccer season is currently active and runs through October 2024. Basketball season starts September 5, 2024. Registration is ongoing for both sports.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Can I volunteer without playing?</h3>
+                    <p>Absolutely! We welcome volunteers for various roles including refereeing, event organization, social media, and community outreach. Contact us at volunteer@bassl.org to get involved.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section" style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%); color: white;">
+        <div class="container text-center">
+            <h2>Ready to Join BASSL?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">Take the first step towards becoming part of our amazing community!</p>
+            <div>
+                <a href="mailto:registration@bassl.org" class="btn" style="background-color: white; color: #28a745; margin-right: 1rem;">Start Registration</a>
+                <a href="teams.html" class="btn btn-secondary">Browse Teams</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>BASSL</h4>
+                    <p>Bay Area Shia Sports League</p>
+                    <p>Building community through sports</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <p><a href="teams.html">Teams</a></p>
+                    <p><a href="schedule.html">Schedule</a></p>
+                    <p><a href="standings.html">Standings</a></p>
+                    <p><a href="contact.html">Contact</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Email: info@bassl.org</p>
+                    <p>Phone: (555) 123-4567</p>
+                    <p>Bay Area, California</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <p><a href="#">Facebook</a></p>
+                    <p><a href="#">Instagram</a></p>
+                    <p><a href="#">Twitter</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bay Area Shia Sports League (BASSL). All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for form handling and mobile menu -->
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navMenu = document.getElementById('nav-menu');
+            
+            if (menuToggle && navMenu) {
+                menuToggle.addEventListener('click', function() {
+                    navMenu.classList.toggle('show');
+                });
+            }
+            
+            // Form submission handling
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Basic form validation
+                    const requiredFields = contactForm.querySelectorAll('[required]');
+                    let isValid = true;
+                    
+                    requiredFields.forEach(field => {
+                        if (!field.value.trim()) {
+                            isValid = false;
+                            field.style.borderColor = '#dc3545';
+                        } else {
+                            field.style.borderColor = '#28a745';
+                        }
+                    });
+                    
+                    if (isValid) {
+                        // In a real application, you would send this data to a server
+                        alert('Thank you for your message! We will get back to you within 24 hours.');
+                        contactForm.reset();
+                        
+                        // Reset field border colors
+                        requiredFields.forEach(field => {
+                            field.style.borderColor = '#dee2e6';
+                        });
+                    } else {
+                        alert('Please fill in all required fields.');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
