@@ -36,6 +36,19 @@ body {
     background-color: var(--cream-bg);
 }
 
+.main-logo {
+    position: absolute;
+    left: 20;
+    margin-left: 10px;
+    margin-top: 10px;
+    top: 20;
+    border-radius: 50%;
+}
+
+.main-logo-home-link {
+    text-decoration: none;
+}
+
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;
@@ -126,6 +139,7 @@ nav a {
 nav a:hover,
 nav a.active {
     background-color: rgba(74, 155, 94, 0.3);
+    color: var(--white);
 }
 
 /* Mobile Menu Toggle */
@@ -180,6 +194,7 @@ nav a.active {
     background-color: var(--primary-green);
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(74, 155, 94, 0.4);
+    color: var(--white)
 }
 
 .btn-secondary {
