@@ -175,9 +175,9 @@
         </div>
     </footer>
 
-    <!-- Minimal JavaScript for mobile menu -->
+    <!-- JavaScript for mobile menu and scroll animations -->
     <script>
-        // Mobile menu toggle - minimal JavaScript
+        // Initialize scroll animations
         document.addEventListener('DOMContentLoaded', function() {
             const menuToggle = document.querySelector('.menu-toggle');
             const navMenu = document.getElementById('nav-menu');
@@ -187,6 +187,27 @@
                     navMenu.classList.toggle('show');
                 });
             }
+
+            // Scroll animation observer
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all content sections and cards for scroll animations
+            document.querySelectorAll('.section, .card, table, .table-container, .card-grid').forEach(el => {
+                el.classList.add('scroll-animate');
+                observer.observe(el);
+            });
         });
     </script>
 </body>
