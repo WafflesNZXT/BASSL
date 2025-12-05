@@ -19,6 +19,7 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
+                    <img src="BASSL logo.jpg" alt="BASSL Logo" class="header-logo-image">
                     <div>
                         <h1>BASSL</h1>
                         <div class="logo-subtitle">Bay Area Shia Sports League</div>
@@ -31,14 +32,14 @@
                         <li><a href="teams.html">Teams</a></li>
                         <li><a href="schedule.html">Schedule</a></li>
                         <li><a href="standings.html" class="active">Standings</a></li>
+                        <li><a href="team-members.html">Meet the Team</a></li>
+                        <li><a href="past-events.html">Past Events</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
-    <!--Main Logo-->
-    <a class="main-logo-home-link" href="index.html"><img class="main-logo" src="BASSL logo.jpg" alt="main-logo"></a>
 
     <!-- Page Header -->
     <section class="section" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 4rem 0;">
@@ -56,12 +57,27 @@
             <div style="margin-top: 1rem;">
                 <span style="background-color: #28a745; margin-right: 1rem; padding: 0.5rem 0.8rem; border-radius: 5px;"><strong>Soccer Season Active</strong></span>
                 <span style="background-color: #ffc107; color: #333; padding: 0.5rem 0.8rem; border-radius: 5px;"><strong>Basketball Season Starts Jan 1</strong></span>
+                <span style="background-color: #17a2b8; color: white; margin-left: 1rem; padding: 0.5rem 0.8rem; border-radius: 5px;"><strong>Cricket Tournaments Year-Round</strong></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sport Filter Tabs -->
+    <section class="section" style="background-color: white; padding: 2rem 0;">
+        <div class="container">
+            <div class="text-center mb-2">
+                <h3>Select Sport</h3>
+                <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+                    <button class="btn sport-filter-btn" onclick="showStandings('soccer')" id="btn-sport-soccer" style="background-color: #28a745;">⚽ Soccer</button>
+                    <button class="btn sport-filter-btn" onclick="showStandings('basketball')" id="btn-sport-basketball">🏀 Basketball</button>
+                    <button class="btn sport-filter-btn" onclick="showStandings('cricket')" id="btn-sport-cricket">🏏 Cricket</button>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Soccer Standings -->
-    <section class="section">
+    <section class="section" id="soccer-standings-section">
         <div class="container">
             <h2 class="text-center mb-2">⚽ Soccer League Standings</h2>
             <div class="table-container">
@@ -122,18 +138,70 @@
     </section>
 
     <!-- Basketball Standings (Placeholder) -->
-    <section class="section" style="background-color: white;">
+    <section class="section" style="background-color: white; display: none;" id="basketball-standings-section">
         <div class="container">
             <h2 class="text-center mb-2">🏀 Basketball League Standings</h2>
             <div class="text-center" style="padding: 3rem 0;">
                 <h3 style="color: #666;">Season Starts Jan 1, 2025</h3>
                 <p style="color: #666; margin-bottom: 2rem;">Basketball standings will be available once the season begins.</p>
                 <div class="card-grid" style="max-width: 800px; margin: 0 auto;">
-                    <div class="card text-center">
+                    <div class="card info-card text-center">
                         <h4>Bay Area Ballers</h4>
                         <p>Ready for tip-off</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cricket Standings -->
+    <section class="section" style="background-color: white; display: none;" id="cricket-standings-section">
+        <div class="container">
+            <h2 class="text-center mb-2">🏏 Cricket League Standings</h2>
+            <div class="table-container">
+                <table class="standings-table">
+                    <thead>
+                        <tr>
+                            <th>Pos</th>
+                            <th>Team</th>
+                            <th>Matches</th>
+                            <th>Wins</th>
+                            <th>Losses</th>
+                            <th>NR</th>
+                            <th>Runs For</th>
+                            <th>Runs Against</th>
+                            <th>NRR</th>
+                            <th>Points</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><strong>Example Team</strong></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0.00</td>
+                            <td><strong>0</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Legend -->
+            <div style="margin-top: 1rem; text-align: center;">
+                <p><strong>Legend:</strong></p>
+                <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 0.5rem;">
+                    <span style="background-color: #d4edda; padding: 0.3rem 0.8rem; border-radius: 5px;">🏆 Championship Position</span>
+                    <span style="background-color: #d1ecf1; padding: 0.3rem 0.8rem; border-radius: 5px;">🎯 Playoff Positions</span>
+                    <span style="background-color: #f8d7da; padding: 0.3rem 0.8rem; border-radius: 5px;">⚠️ Elimination Zone</span>
+                </div>
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                    <strong>NR:</strong> No Results | <strong>NRR:</strong> Net Run Rate
+                </p>
             </div>
         </div>
     </section>
@@ -143,7 +211,7 @@
         <div class="container">
             <h2 class="text-center mb-2">Season Statistics</h2>
             <div class="card-grid">
-                <div class="card text-center">
+                <div class="card info-card text-center">
                     <h3 style="color: #28a745;">⚽ Top Scorer</h3>
                     <h4>John Doe</h4>
                     <p>Bay Area United</p>
@@ -192,9 +260,9 @@
                 </div>
                 <div class="footer-section">
                     <h4>Follow Us</h4>
-                    <p><a href="#">Facebook</a></p>
+                    <p><a href="https://www.facebook.com/bashiasportsleague" target="_blank">Facebook</a></p>
                     <p><a href="https://www.instagram.com/bashiasportsleague/" target="_blank">Instagram</a></p>
-                    <p><a href="#">Twitter</a></p>
+                    <p><a href="https://twitter.com/bashiasports" target="_blank">Twitter</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -205,6 +273,31 @@
 
     <!-- Minimal JavaScript for mobile menu and scroll animations -->
     <script>
+        // Sport filter function
+        function showStandings(sport) {
+            // Hide all sport sections
+            document.getElementById('soccer-standings-section').style.display = 'none';
+            document.getElementById('basketball-standings-section').style.display = 'none';
+            document.getElementById('cricket-standings-section').style.display = 'none';
+            
+            // Remove active state from all buttons
+            document.getElementById('btn-sport-soccer').style.backgroundColor = '';
+            document.getElementById('btn-sport-basketball').style.backgroundColor = '';
+            document.getElementById('btn-sport-cricket').style.backgroundColor = '';
+            
+            // Show selected sport section
+            if (sport === 'soccer') {
+                document.getElementById('soccer-standings-section').style.display = 'block';
+                document.getElementById('btn-sport-soccer').style.backgroundColor = '#28a745';
+            } else if (sport === 'basketball') {
+                document.getElementById('basketball-standings-section').style.display = 'block';
+                document.getElementById('btn-sport-basketball').style.backgroundColor = '#007bff';
+            } else if (sport === 'cricket') {
+                document.getElementById('cricket-standings-section').style.display = 'block';
+                document.getElementById('btn-sport-cricket').style.backgroundColor = '#17a2b8';
+            }
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
             const menuToggle = document.querySelector('.menu-toggle');
             const navMenu = document.getElementById('nav-menu');

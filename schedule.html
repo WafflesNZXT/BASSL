@@ -19,6 +19,7 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
+                    <img src="BASSL logo.jpg" alt="BASSL Logo" class="header-logo-image">
                     <div>
                         <h1>BASSL</h1>
                         <div class="logo-subtitle">Bay Area Shia Sports League</div>
@@ -31,14 +32,14 @@
                         <li><a href="teams.html">Teams</a></li>
                         <li><a href="schedule.html" class="active">Schedule</a></li>
                         <li><a href="standings.html">Standings</a></li>
+                        <li><a href="team-members.html">Meet the Team</a></li>
+                        <li><a href="past-events.html">Past Events</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
-    <!--Main Logo-->
-    <a class="main-logo-home-link" href="index.html"><img class="main-logo" src="BASSL logo.jpg" alt="main-logo"></a>
 
     <!-- Page Header -->
     <section class="section" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 4rem 0;">
@@ -57,8 +58,9 @@
                     <button class="btn" onclick="showSchedule('all')" id="btn-all">All Games</button>
                     <button class="btn" onclick="showSchedule('upcoming')" id="btn-upcoming" style="background-color: #28a745;">Upcoming</button>
                     <button class="btn" onclick="showSchedule('completed')" id="btn-completed">Completed</button>
-                    <button class="btn" onclick="showSchedule('soccer')" id="btn-soccer">Soccer</button>
-                    <button class="btn" onclick="showSchedule('basketball')" id="btn-basketball">Basketball</button>
+                    <button class="btn" onclick="showSchedule('soccer')" id="btn-soccer">⚽ Soccer</button>
+                    <button class="btn" onclick="showSchedule('basketball')" id="btn-basketball">🏀 Basketball</button>
+                    <button class="btn" onclick="showSchedule('cricket')" id="btn-cricket">🏏 Cricket</button>
                 </div>
             </div>
         </div>
@@ -133,7 +135,7 @@
         <div class="container">
             <h2 class="text-center mb-2">Venue Information</h2>
             <div class="card-grid">
-                <div class="card">
+                <div class="card info-card">
                     <h3>Central Park Field A</h3>
                     <p><strong>Address:</strong> 123 Central Park Ave, San Francisco, CA</p>
                     <p><strong>Facilities:</strong> Soccer field, parking, restrooms</p>
@@ -167,9 +169,9 @@
                 </div>
                 <div class="footer-section">
                     <h4>Follow Us</h4>
-                    <p><a href="#">Facebook</a></p>
+                    <p><a href="https://www.facebook.com/bashiasportsleague" target="_blank">Facebook</a></p>
                     <p><a href="https://www.instagram.com/bashiasportsleague/" target="_blank">Instagram</a></p>
-                    <p><a href="#">Twitter</a></p>
+                    <p><a href="https://twitter.com/bashiasports" target="_blank">Twitter</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -243,6 +245,8 @@
                     row.style.display = row.classList.contains('soccer') ? '' : 'none';
                 } else if (filter === 'basketball') {
                     row.style.display = row.classList.contains('basketball') ? '' : 'none';
+                } else if (filter === 'cricket') {
+                    row.style.display = row.classList.contains('cricket') ? '' : 'none';
                 }
             });
         }

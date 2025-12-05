@@ -4,17 +4,19 @@
 
 /* CSS Custom Properties - BASSL Logo Colors */
 :root {
-    --primary-dark: #1a3d2e;      /* Dark forest green from logo */
-    --primary-green: #2d5a3d;     /* Medium green from logo */
-    --accent-emerald: #4a9b5e;    /* Emerald green from logo */
-    --accent-light: #6bb77b;      /* Light green accent */
-    --cream-bg: #f5f3f0;          /* Cream background from logo */
-    --text-dark: #2c3e2d;         /* Dark green text */
-    --text-light: #5a6b5d;        /* Medium green text */
+    --primary-dark: #0d2b20;      /* Darker forest green - more professional */
+    --primary-green: #1a4d38;     /* Medium green - sharper */
+    --accent-emerald: #2eaa5f;    /* Brighter emerald - more vibrant */
+    --accent-light: #4bc768;      /* Brighter light green accent */
+    --cream-bg: #f0ebe5;          /* Slightly warmer cream background */
+    --text-dark: #1a2e1e;         /* Darker green text - better contrast */
+    --text-light: #3d5a45;        /* Medium green text - better readability */
     --white: #ffffff;
-    --success: #4a9b5e;           /* Using logo green for success */
+    --success: #2eaa5f;           /* Using brighter green for success */
     --warning: #d4a574;           /* Warm tone complement */
-    --danger: #c85a5a;            /* Muted red */
+    --danger: #b94a4a;            /* Slightly more vibrant red */
+    --accent-blue: #1565a0;       /* Professional blue for accents */
+    --accent-teal: #0d8989;       /* Teal for sports theme */
 }
 
 /* CSS Reset and Base Styles */
@@ -171,9 +173,9 @@ a:hover {
 
 /* Header and Navigation */
 header {
-    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-green) 100%);
+    background: linear-gradient(135deg, var(--primary-dark) 0%, #0f3d2a 100%);
     color: var(--white);
-    box-shadow: 0 2px 10px rgba(26, 61, 46, 0.3);
+    box-shadow: 0 4px 12px rgba(13, 43, 32, 0.4);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -191,6 +193,14 @@ header {
     display: flex;
     align-items: center;
     gap: 1rem;
+}
+
+.header-logo-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .logo h1 {
@@ -266,24 +276,26 @@ nav a.active {
 
 .btn {
     display: inline-block;
-    padding: 1rem 2rem;
+    padding: 0.95rem 2.2rem;
     background-color: var(--accent-emerald);
     color: var(--white);
-    border-radius: 5px;
-    font-weight: 600;
+    border-radius: 6px;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.8px;
     transition: all 0.3s ease;
-    border: none;
+    border: 2px solid var(--accent-emerald);
     cursor: pointer;
     animation: scaleIn 0.6s ease-out;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 8px rgba(46, 170, 95, 0.25);
 }
 
 .btn:hover {
-    background-color: var(--primary-green);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(74, 155, 94, 0.4);
-    color: var(--white)
+    background-color: #1e8449;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(46, 170, 95, 0.4);
+    color: var(--white);
 }
 
 .btn-secondary {
@@ -327,26 +339,32 @@ nav a.active {
 
 .card {
     background: var(--white);
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 2rem;
-    box-shadow: 0 4px 15px rgba(26, 61, 46, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 20px rgba(13, 43, 32, 0.12);
+    transition: all 0.3s ease;
     animation: none;
+    border: 1px solid rgba(46, 170, 95, 0.1);
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(26, 61, 46, 0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(46, 170, 95, 0.2);
+}
+
+/* Info-only cards without hover effects */
+.card.info-card {
+    transition: none;
+}
+
+.card.info-card:hover {
+    transform: none;
+    box-shadow: 0 6px 20px rgba(13, 43, 32, 0.12);
 }
 
 .card h3 {
     color: var(--primary-dark);
     margin-bottom: 1rem;
-}
-
-/* Team Cards */
-.team-card {
-    text-align: center;
 }
 
 .team-logo {
@@ -361,6 +379,111 @@ nav a.active {
     color: var(--white);
     font-size: 2rem;
     font-weight: bold;
+}
+
+/* Team Member Cards */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.team-member-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(13, 43, 32, 0.12);
+    transition: all 0.3s ease;
+    animation: none;
+    border: 1px solid rgba(46, 170, 95, 0.1);
+}
+
+.team-member-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(46, 170, 95, 0.2);
+}
+
+.member-photo {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, var(--primary-dark), var(--accent-emerald));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 3rem;
+}
+
+.team-member-card h3 {
+    color: var(--primary-dark);
+    margin: 1.5rem 1.5rem 0.5rem;
+}
+
+.member-role {
+    margin: 0 1.5rem;
+}
+
+.team-member-card p {
+    padding: 0 1.5rem;
+    color: #666;
+}
+
+.team-member-card p:last-child {
+    padding-bottom: 1.5rem;
+}
+
+/* Events Grid */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.event-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(13, 43, 32, 0.12);
+    transition: all 0.3s ease;
+    animation: none;
+    border: 1px solid rgba(46, 170, 95, 0.1);
+}
+
+.event-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(46, 170, 95, 0.2);
+}
+
+.event-image {
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+}
+
+.event-card:hover .event-image {
+    transform: scale(1.05);
+}
+
+.event-card h3 {
+    color: var(--primary-dark);
+    margin: 1.5rem 1.5rem 0.5rem;
+}
+
+.event-date {
+    margin: 0.5rem 1.5rem 1rem;
+}
+
+.event-card p {
+    margin: 0 1.5rem;
+    color: #666;
+}
+
+.event-card .btn {
+    margin: 1.5rem 1.5rem 1.5rem 0;
 }
 
 /* Tables */
@@ -388,18 +511,19 @@ th, td {
 th {
     background-color: var(--primary-dark);
     color: var(--white);
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-size: 0.9rem;
+    letter-spacing: 0.6px;
+    font-size: 0.85rem;
+    padding: 1rem;
 }
 
 tr:hover {
-    background-color: rgba(74, 155, 94, 0.05);
+    background-color: rgba(46, 170, 95, 0.08);
 }
 
 .standings-table td:first-child {
-    font-weight: 600;
+    font-weight: 700;
     color: var(--primary-dark);
 }
 
@@ -419,10 +543,10 @@ label {
 input, textarea, select {
     width: 100%;
     padding: 1rem;
-    border: 2px solid rgba(74, 155, 94, 0.3);
-    border-radius: 5px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
     font-size: 1rem;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    transition: all 0.3s ease;
     background-color: var(--white);
     animation: fadeInUp 0.5s ease-out;
 }
@@ -430,39 +554,44 @@ input, textarea, select {
 input:focus, textarea:focus, select:focus {
     outline: none;
     border-color: var(--accent-emerald);
-    box-shadow: 0 0 0 3px rgba(74, 155, 94, 0.1);
-    background-color: rgba(74, 155, 94, 0.02);
+    box-shadow: 0 0 0 4px rgba(46, 170, 95, 0.15);
+    background-color: rgba(46, 170, 95, 0.02);
 }
 
 /* Footer */
 footer {
-    background-color: var(--primary-dark);
+    background: linear-gradient(135deg, var(--primary-dark) 0%, #0a2418 100%);
     color: var(--white);
     text-align: center;
     padding: 3rem 0 2rem;
     margin-top: 4rem;
     animation: fadeInUp 0.8s ease-out;
+    box-shadow: 0 -4px 12px rgba(13, 43, 32, 0.3);
 }
 
 .footer-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    gap: 2.5rem;
     margin-bottom: 2rem;
 }
 
 .footer-section h4 {
     margin-bottom: 1rem;
-    color: var(--white);
+    color: var(--accent-light);
+    font-size: 1.1rem;
+    font-weight: 700;
 }
 
 .footer-section p, .footer-section a {
-    color: rgba(255,255,255,0.8);
-    margin-bottom: 0.5rem;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 0.6rem;
+    transition: color 0.3s ease;
 }
 
 .footer-section a:hover {
     color: var(--accent-light);
+    font-weight: 600;
 }
 
 .footer-bottom {
