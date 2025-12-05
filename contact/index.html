@@ -19,11 +19,13 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <img src="../BASSL logo.jpg" alt="BASSL Logo" class="header-logo-image">
-                    <div>
-                        <h1>BASSL</h1>
-                        <div class="logo-subtitle">Bay Area Shia Sports League</div>
-                    </div>
+                    <a href="../home/" style="text-decoration: none; display: flex; align-items: center;">
+                        <img src="../BASSL logo.jpg" alt="BASSL Logo" class="header-logo-image">
+                        <div>
+                            <h1>BASSL</h1>
+                            <div class="logo-subtitle">Bay Area Shia Sports League</div>
+                        </div>
+                    </a>
                 </div>
                 <nav>
                     <button class="menu-toggle" aria-label="Toggle navigation menu">☰</button>
@@ -273,6 +275,7 @@
                     <h4>BASSL</h4>
                     <p>Bay Area Shia Sports League</p>
                     <p>Building community through sports</p>
+                    <img src="../BASSL logo.jpg" alt="BASSL Logo" style="width: 100px; height: 100px; margin-top: 1rem; border-radius: 50%; object-fit: cover;">
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
@@ -311,6 +314,8 @@
             if (menuToggle && navMenu) {
                 menuToggle.addEventListener('click', function() {
                     navMenu.classList.toggle('show');
+                    menuToggle.classList.toggle('active');
+                    menuToggle.textContent = menuToggle.classList.contains('active') ? '✕' : '☰';
                 });
             }
 

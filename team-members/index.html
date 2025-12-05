@@ -19,11 +19,13 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <img src="../BASSL logo.jpg" alt="BASSL Logo" class="header-logo-image">
-                    <div>
-                        <h1>BASSL</h1>
-                        <div class="logo-subtitle">Bay Area Shia Sports League</div>
-                    </div>
+                    <a href="../home/" style="text-decoration: none; display: flex; align-items: center;">
+                        <img src="../BASSL logo.jpg" alt="BASSL Logo" class="header-logo-image">
+                        <div>
+                            <h1>BASSL</h1>
+                            <div class="logo-subtitle">Bay Area Shia Sports League</div>
+                        </div>
+                    </a>
                 </div>
                 <nav>
                     <button class="menu-toggle" aria-label="Toggle navigation menu">☰</button>
@@ -55,45 +57,31 @@
             <h2 class="text-center mb-2">Leadership & Staff</h2>
             <div class="team-grid">
                 <div class="team-member-card">
-                    <div class="member-photo" style="background: linear-gradient(135deg, #4a9b5e, #6bb77b);"></div>
-                    <h3>Founder & Director</h3>
-                    <p class="member-role" style="color: var(--accent-emerald); font-weight: 600;">Executive Leadership</p>
-                    <p>Leading BASSL with vision and dedication to bring the community together through sports and competition.</p>
+                    <div class="member-photo" style="background: linear-gradient(135deg, #4a9b5e, #6bb77b);">👤</div>
+                    <h3 style="text-align: center;">Founder & Director</h3>
+                    <p class="member-role" style="color: var(--accent-emerald); font-weight: 600; text-align: center;">Executive Leadership</p>
+                    <p style="text-align: center;">Leading BASSL with vision and dedication to bring the community together through sports and competition.</p>
                 </div>
 
                 <div class="team-member-card">
-                    <div class="member-photo" style="background: linear-gradient(135deg, #2d5a3d, #4a9b5e);"></div>
-                    <h3>Soccer League Manager</h3>
-                    <p class="member-role" style="color: var(--accent-emerald); font-weight: 600;">Sports Operations</p>
-                    <p>Overseeing all soccer league activities, scheduling, and ensuring smooth operations for our soccer community.</p>
+                    <div class="member-photo" style="background: linear-gradient(135deg, #2d5a3d, #4a9b5e);">⚽</div>
+                    <h3 style="text-align: center;">Soccer League Manager</h3>
+                    <p class="member-role" style="color: var(--accent-emerald); font-weight: 600; text-align: center;">Sports Operations</p>
+                    <p style="text-align: center;">Overseeing all soccer league activities, scheduling, and ensuring smooth operations for our soccer community.</p>
                 </div>
 
                 <div class="team-member-card">
-                    <div class="member-photo" style="background: linear-gradient(135deg, #1a3d2e, #2d5a3d);"></div>
-                    <h3>Basketball Coordinator</h3>
-                    <p class="member-role" style="color: var(--accent-emerald); font-weight: 600;">Sports Operations</p>
-                    <p>Managing basketball league operations, tournaments, and player development programs throughout the Bay Area.</p>
+                    <div class="member-photo" style="background: linear-gradient(135deg, #1a3d2e, #2d5a3d);">🏀</div>
+                    <h3 style="text-align: center;">Basketball Coordinator</h3>
+                    <p class="member-role" style="color: var(--accent-emerald); font-weight: 600; text-align: center;">Sports Operations</p>
+                    <p style="text-align: center;">Managing basketball league operations, tournaments, and player development programs throughout the Bay Area.</p>
                 </div>
 
                 <div class="team-member-card">
-                    <div class="member-photo" style="background: linear-gradient(135deg, #6bb77b, #4a9b5e);"></div>
-                    <h3>Community Outreach</h3>
-                    <p class="member-role" style="color: var(--accent-emerald); font-weight: 600;">Community Relations</p>
-                    <p>Building bridges between BASSL and the broader Shia community, organizing events and community engagement activities.</p>
-                </div>
-
-                <div class="team-member-card">
-                    <div class="member-photo" style="background: linear-gradient(135deg, #4a9b5e, #1a3d2e);"></div>
-                    <h3>Volunteer Coordinator</h3>
-                    <p class="member-role" style="color: var(--accent-emerald); font-weight: 600;">Operations</p>
-                    <p>Recruiting, training, and coordinating our amazing volunteer team to support all BASSL activities and events.</p>
-                </div>
-
-                <div class="team-member-card">
-                    <div class="member-photo" style="background: linear-gradient(135deg, #2d5a3d, #6bb77b);"></div>
-                    <h3>Marketing & Social Media</h3>
-                    <p class="member-role" style="color: var(--accent-emerald); font-weight: 600;">Communications</p>
-                    <p>Managing BASSL's digital presence and keeping our community informed about leagues, events, and updates.</p>
+                    <div class="member-photo" style="background: linear-gradient(135deg, #2d5a3d, #6bb77b);">📱</div>
+                    <h3 style="text-align: center;">Marketing & Social Media</h3>
+                    <p class="member-role" style="color: var(--accent-emerald); font-weight: 600; text-align: center;">Communications</p>
+                    <p style="text-align: center;">Managing BASSL's digital presence and keeping our community informed about leagues, events, and updates.</p>
                 </div>
             </div>
         </div>
@@ -119,6 +107,7 @@
                     <h4>BASSL</h4>
                     <p>Bay Area Shia Sports League</p>
                     <p>Building community through sports</p>
+                    <img src="../BASSL logo.jpg" alt="BASSL Logo" style="width: 100px; height: 100px; margin-top: 1rem; border-radius: 50%; object-fit: cover;">
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
@@ -157,6 +146,8 @@
             if (menuToggle && navMenu) {
                 menuToggle.addEventListener('click', function() {
                     navMenu.classList.toggle('show');
+                    menuToggle.classList.toggle('active');
+                    menuToggle.textContent = menuToggle.classList.contains('active') ? '✕' : '☰';
                 });
             }
 
