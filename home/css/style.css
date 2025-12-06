@@ -258,10 +258,11 @@ nav a.active {
                 url('../images/hero-bg.jpg') center/cover;
     color: var(--white);
     text-align: center;
-    padding: 6rem 0;
-    min-height: 60vh;
+    padding: 0;
+    height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
     animation: fadeInUp 0.8s ease-out;
 }
 
@@ -699,8 +700,9 @@ footer {
     }
     
     .hero {
-        padding: 4rem 0;
-        min-height: 50vh;
+        height: 100vh;
+        padding: 0;
+        min-height: unset;
     }
     
     .hero-content h1 {
